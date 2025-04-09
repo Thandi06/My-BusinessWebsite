@@ -464,3 +464,43 @@ section {
     font-size: 1rem;
     color: #333;
 }
+.whatsapp-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-icon {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.15);
+    animation: bounce 0.6s ease;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.15) translateY(0);
+    }
+
+    30% {
+        transform: scale(1.2) translateY(-5px);
+    }
+
+    50% {
+        transform: scale(1.15) translateY(0);
+    }
+
+    70% {
+        transform: scale(1.2) translateY(-2px);
+    }
+
+    100% {
+        transform: scale(1.15) translateY(0);
+    }
+}
