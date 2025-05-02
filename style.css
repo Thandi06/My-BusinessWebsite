@@ -535,3 +535,71 @@ section {
         width: 100%;
     }
 }
+@media (max-width: 480px) {
+
+    /* Skills Section */
+    .skills-wrapper {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .skills-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .skills-empty {
+        display: none;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .footer-contact,
+    .footer-services {
+        width: 100%;
+    }
+
+    .footer-contact table {
+        width: 100%;
+        display: block;
+    }
+
+    .footer-contact td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        border: none !important;
+        text-align: center;
+    }
+
+    .footer-contact img {
+        margin: 0 auto 10px;
+    }
+
+    .footer-services ul {
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    .footer-services li {
+        margin-bottom: 0.5rem;
+    }
+
+    footer.footer p {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 1rem;
+    }
+}
