@@ -1,5 +1,4 @@
 /* Brightened style.css */
-
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@
 
 body {
     background-color: #fff8f0;
-    /* Lightened background */
     color: #402a23;
     line-height: 1.6;
 }
@@ -25,6 +23,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -54,6 +53,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     color: #402a23;
+    padding: 2rem;
 }
 
 .overlay {
@@ -64,15 +64,20 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1000px;
-    width: 90%;
+    width: 100%;
     backdrop-filter: blur(4px);
     color: #402a23;
 }
+
 .hero-content {
     display: flex;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
 }
+
 .hero-text {
     flex: 1;
     padding: 1rem;
@@ -260,22 +265,9 @@ section {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .about-project-container {
-        flex-direction: column;
-        padding: 2rem 1rem;
-    }
-
-    .project-preview,
-    .about-card {
-        max-width: 100%;
-    }
-}
-
 /* Skills Section with Background Image */
 .skills-section {
     background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/621/original/pexels-fauxels-3184460.jpg?1744204139');
-    /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -284,7 +276,6 @@ section {
     color: #402a23;
 }
 
-/* Overlay for readability */
 .skills-overlay {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 4rem 2rem;
@@ -293,12 +284,12 @@ section {
     margin: 0 auto;
 }
 
-/* Flexbox Layout */
 .skills-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .skills-empty {
@@ -314,24 +305,7 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Skills List */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-}
-
-.skills-grid li {
-    background: #fffaf6;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 6px;
-    color: #402a23;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Contact Section */
 .contact-services-section {
     background-color: #333;
     color: #fff;
@@ -438,7 +412,8 @@ section {
     color: #f3bc77;
     font-size: 1rem;
 }
-/* Add styling for the Scroll Control */
+
+/* Scroll Control */
 .scroll-control-container {
     position: fixed;
     top: 20px;
@@ -464,6 +439,8 @@ section {
     font-size: 1rem;
     color: #333;
 }
+
+/* WhatsApp Icon */
 .whatsapp-link {
     display: flex;
     justify-content: center;
@@ -484,23 +461,77 @@ section {
 }
 
 @keyframes bounce {
-    0% {
+
+    0%,
+    100% {
         transform: scale(1.15) translateY(0);
     }
 
-    30% {
+    30%,
+    70% {
         transform: scale(1.2) translateY(-5px);
     }
 
     50% {
         transform: scale(1.15) translateY(0);
     }
+}
 
-    70% {
-        transform: scale(1.2) translateY(-2px);
+/* 🌐 Responsive Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
     }
 
-    100% {
-        transform: scale(1.15) translateY(0);
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .overlay {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .skills-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-services-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .contact-box,
+    .services-box {
+        width: 100%;
     }
 }
