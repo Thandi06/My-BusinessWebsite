@@ -558,56 +558,43 @@ section {
         display: none;
     }
 
-    /* Footer Section */
-            .footer-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1.5rem 1rem;
-                gap: 1.5rem;
-                text-align: center;
-            }
-            
-            .footer-contact,
-            .footer-services {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
+        .footer-contact table {
+            display: block;
+            width: 100%;
+        }
     
-            .footer-contact table {
-                width: 100%;
-                display: block;
-            }
+        .footer-contact tr {
+            display: block;
+            width: 100%;
+        }
     
-            .footer-contact tr,
-            .footer-contact td {
-                display: block;
-                width: 100%;
-                padding: 10px 0;
-                border: none !important;
-            }
+        .footer-contact td {
+            display: block;
+            width: 100% !important;
+            text-align: center !important;
+            padding: 10px 0 !important;
+            border: none !important;
+        }
     
-            .footer-contact td img {
-                margin: 0 auto 10px;
-            }
+        .footer-contact img {
+            margin: 0 auto 10px;
+        }
     
-            .footer-contact td p,
-            .footer-contact td a {
-                font-size: 14px;
-                color: #eee;
-                margin: 5px 0;
-            }
+        .footer-contact .td-1 {
+            padding-left: 0 !important;
+        }
     
-            .footer-contact td strong {
-                color: #f3bc77;
-            }
+        .footer-contact p,
+        .footer-contact a {
+            text-align: center !important;
+            display: block;
+            margin: 5px auto;
+        }
     
-            .footer-contact hr {
-                width: 80%;
-                margin: 10px auto;
-                border: 1px solid #a55233;
-            }
+        .footer-contact hr {
+            margin: 10px auto;
+            width: 60%;
+        }
     
             .footer-services ul {
                 padding-left: 0;
@@ -625,10 +612,4 @@ section {
                 padding: 1rem;
             }
         }
-        .td-1{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-
-        }
+        
